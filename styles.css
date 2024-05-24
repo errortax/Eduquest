@@ -1,0 +1,209 @@
+/* General Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light grayish-blue background */
+    color: #333; /* Dark text color */
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff; /* White text color */
+    background-color: #007bff; /* Blue link color */
+    padding: 10px 20px; /* Padding for button-like appearance */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+a:hover {
+    background-color: #016682; /* Darker blue on hover */
+}
+
+/* Header Styles */
+
+header {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    padding: 20px;
+}
+
+/* Navigation Styles */
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color */
+}
+
+/* Main Content Styles */
+
+main {
+    padding: 20px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+   
+}
+#html,
+#html p,
+#css,
+#css p,
+#javascript,
+#javascript p,
+#bootstrap,
+#bootstrap p{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+section {
+   
+    padding: 20px;
+    gap: 4rem;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: hsl(0, 7%, 86%);
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #f6f6f6, #dad4d3); /* Gradient color background */
+    border: 1px solid #ddd;
+    padding: 40px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+#about img {
+    width: auto;
+    height: 300px;
+    display: block;
+    margin-bottom: 20px;
+    filter: grayscale(100%);
+    object-fit: cover;
+}
+
+#about h2, #about h3 {
+    color: #333;
+    text-transform: uppercase;
+    animation: fade-in 1s ease-in-out;
+    font-size: 2rem;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#about p {
+    color: #666;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+
+section h3, h2 {
+    margin-bottom: 10px;
+}
+
+section p {
+    color: #010f51; /* White text color */
+}
+.course-grid p{
+    margin: 30px 0;
+}
+
+/* Services Section Styles */
+section#services {
+    /* Your styles for the section with id "services" go here */
+    /* Add your styles for all the elements inside the section here */
+    /* Modify the styles for the services section in index.html */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    background-color: hwb(206 77% 20% / 0.924);
+}
+
+section#services h2 {
+    /* Styles for the h2 element inside the section */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+section#services .service-grid {
+    /* Styles for the service-grid class inside the section */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+section#services .service {
+    /* Styles for the service class inside the section */
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section#services .service h3 {
+    /* Styles for the h3 element inside the service class */
+    margin-bottom: 10px;
+}
+
+section#services .service p {
+    /* Styles for the p element inside the service class */
+    color: #333;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+#why{
+    background-color: #ddd;
+    
+}
+#why p{
+    color: #333;
+    line-height: 1.6;
+    padding: 1rem;
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #343a40; /* Dark gray background */
+    color: #ffffff; /* White text color */
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

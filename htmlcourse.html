@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course - Eduquest</title>
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Eduquest</div>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+                <li><a href="index.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-header">
+            <h1>HTML Basics</h1>
+            <p>Learn the basics of HTML and create your first web page.</p>
+        </section>
+
+        <section class="course-content">
+            <h2>Course Modules</h2>
+            <div class="module" id="introduction">
+                <h3>Introduction to HTML</h3>
+                <p>Get started with the basics of HTML, including its structure and essential elements.</p>
+                <img src="images/html-intro.png" alt="HTML Introduction">
+                <div class="assignment">
+                    <h4>Assignment</h4>
+                    <p>Create a basic HTML page that includes a heading, a paragraph, and an image.</p>
+                    <label for="intro-assignment">Submit your assignment:</label>
+                    <input type="file" id="intro-assignment" name="intro-assignment">
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <div class="module" id="tags-attributes">
+                <h3>HTML Tags and Attributes</h3>
+                <p>Learn about various HTML tags and how to use attributes to enhance your web pages.</p>
+                <img src="images/html-tags.png" alt="HTML Tags and Attributes">
+                <div class="assignment">
+                    <h4>Assignment</h4>
+                    <p>Create an HTML page with different tags and use at least five different attributes.</p>
+                    <label for="tags-assignment">Submit your assignment:</label>
+                    <input type="file" id="tags-assignment" name="tags-assignment">
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <div class="module" id="lists-links">
+                <h3>Creating Lists and Links</h3>
+                <p>Discover how to create ordered and unordered lists, as well as hyperlinks.</p>
+                <img src="images/html-lists-links.png" alt="HTML Lists and Links">
+                <div class="assignment">
+                    <h4>Assignment</h4>
+                    <p>Create a webpage that includes an ordered list, an unordered list, and several hyperlinks.</p>
+                    <label for="lists-assignment">Submit your assignment:</label>
+                    <input type="file" id="lists-assignment" name="lists-assignment">
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <div class="module" id="embedding-media">
+                <h3>Embedding Images and Media</h3>
+                <p>Understand how to embed images, audio, and video into your web pages.</p>
+                <img src="images/html-media.png" alt="Embedding Media">
+                <div class="assignment">
+                    <h4>Assignment</h4>
+                    <p>Create a webpage that includes an image, an audio file, and a video file.</p>
+                    <label for="media-assignment">Submit your assignment:</label>
+                    <input type="file" id="media-assignment" name="media-assignment">
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+            <div class="module" id="building-forms">
+                <h3>Building Forms</h3>
+                <p>Learn how to create forms to collect user input, including text fields, checkboxes, and radio buttons.</p>
+                <img src="images/html-forms.png" alt="Building Forms">
+                <div class="assignment">
+                    <h4>Assignment</h4>
+                    <p>Create a form with text fields, checkboxes, radio buttons, and a submit button.</p>
+                    <label for="forms-assignment">Submit your assignment:</label>
+                    <input type="file" id="forms-assignment" name="forms-assignment">
+                    <button type="button">Submit</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="tasks">
+            <h2>Upcoming Tasks</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" name="task-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                </div>
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="task-list">
+                <!-- Dynamically added tasks will appear here -->
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Eduquest. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

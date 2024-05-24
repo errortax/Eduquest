@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light grey background for high contrast */
+    color: #333; /* Dark grey text for readability */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #000; /* Black background for header */
+    color: #fff; /* White text for high contrast */
+    padding: 1rem 0;
+}
+
+header .logo {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #00ffff; /* Aqua color for links */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #005f5f; /* Darker aqua for better contrast */
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a:focus {
+    background-color: #004d4d; /* Even darker aqua for hover/active state */
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.courses-intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.courses-intro h1 {
+    color: #005f5f;
+}
+
+.courses-intro p {
+    color: #333;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.course-card h2 {
+    color: #005f5f;
+}
+
+.course-card p {
+    color: #333;
+}
+
+.course-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007b7b;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.course-card a:hover, 
+.course-card a:focus {
+    background-color: #005f5f;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333; /* Dark grey background for footer */
+    color: #fff; /* White text for high contrast */
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
