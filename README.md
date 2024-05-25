@@ -11,6 +11,7 @@ Eduquest aims to provide an inclusive learning experience for all users, regardl
 <b>High Contrast Mode: </b> Eduquest offers a high contrast mode to enhance readability and visibility for users with low vision or contrast sensitivity.
 
 <b> Accessible User Interface: </b> We adhere to accessibility guidelines and best practices to ensure that all users can easily navigate, interact with, and comprehend the content on our platform.
-#Benefits of Color Accessibility
+# Benefits of Color Accessibility
+<img src="https://miro.medium.com/v2/resize:fit:2000/1*pEGvrmhJ2gAwQ9PqViUJQA.png" alt="color-palatte" width=500px height=200px>
 <b>Compliance with Accessibility Standards: </b>
 Prioritizing color accessibility helps us comply with accessibility standards such as the Web Content Accessibility Guidelines (WCAG), ensuring that our project meets the needs of a broader audience.
