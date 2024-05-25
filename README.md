@@ -1,4 +1,4 @@
-# Eduquest | <a href='https://errortax.github.io/Eduquest/"> LIVE </a>
+# Eduquest | <a href="https://errortax.github.io/Eduquest/"> LIVE </a>
 Eduquest aims to provide an inclusive learning experience for all users, regardless of their visual abilities. We understand the importance of accessibility in educational platforms and have implemented various features to ensure that individuals with color vision deficiencies can navigate and interact with our platform comfortably.
 <br>
 <br>
