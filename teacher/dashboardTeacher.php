@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="sidebar">
-        <h2>Teacher's Dashboard</h2>
+   <h2> Teacher's Dashboard </h2>
         <nav>
             <ul>
                 <li><a href="#course-content">Course Content</a></li>
@@ -21,7 +21,7 @@
     </div>
     <div class="main-content">
         <header>
-            <h1>Welcome to the Dashboard</h1>
+        <a href="dashboardTeacher.php">  <h1>Welcome to the Dashboard</h1> </a>
         </header>
         <section id="course-content">
             <h2>Course Content</h2>

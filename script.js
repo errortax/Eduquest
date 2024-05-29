@@ -90,10 +90,38 @@ document.getElementById('logout-btn').addEventListener('click', function() {
     }
 });
 
-document.getElementById('update-btn').addEventListener('click', function() {
-    // Show confirmation prompt
-    var confirmLogout = confirm("Are you sure you want to update?");
-    if (confirmLogout) {
-      alert("update successful");
+// document.getElementById('update-btn').addEventListener('click', function() {
+//     // Show confirmation prompt
+//     var confirmLogout = confirm("Are you sure you want to update?");
+//     if (confirmLogout) {
+//       alert("update successful");
+//     }
+// });
+
+
+window.onload = function() {
+    // Apply the zoom effect if it was set in the previous session
+    if (localStorage.getItem('zoom') === 'true') {
+        document.body.style.zoom = "1.2"; // Adjust as needed
+        var zoomLink = document.getElementById('zoomLink');
+        if (zoomLink) {
+            zoomLink.textContent = "Zoom Out";
+        }
     }
-});
+};
+
+var zoomLink = document.getElementById('zoomLink');
+if (zoomLink) {
+    zoomLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (document.body.style.zoom === "") {
+            document.body.style.zoom = "1.2"; // Adjust as needed
+            e.target.textContent = "Zoom Out";
+            localStorage.setItem('zoom', 'true');
+        } else {
+            document.body.style.zoom = "";
+            e.target.textContent = "Zoom In";
+            localStorage.setItem('zoom', 'false');
+        }
+    });
+}

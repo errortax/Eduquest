@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - Eduquest</title>
     <link rel="stylesheet" href="courses.css">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">Eduquest</div>
             <ul>
-                <li><a href="home.php">Dashboard</a></li>
-            
+               <li><a href="home.php">Dashboard</a></li>
                 <li><a href="courses.php">Courses</a></li>
                 <li><a href="profile.php">Profile</a></li>
-            
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="index.html">Logout</a></li>
+                <li><a  id="zoomLink">Zoom In </a></li>
+                <li><a href="logout.php" id="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -28,11 +28,24 @@
             <p>Browse through our extensive list of courses to find the perfect match for your learning journey.</p>
         </section>
 
+        <h2>Your Courses</h2>
+
+
         <section class="course-list">
+
+            <div class="course-card">
+                <h3>HTML Basics</h3>
+                <p>
+                    Learn the fundamentals of HTML and create your first web page.
+                </p>
+                <a href="newhtml.php">Continue Learning</a>
+            </div>
+
+
             <div class="course-card">
                 <h2>HTML Basics</h2>
                 <p>Learn the fundamentals of HTML and create your first web page.</p>
-                <a href="html.html">Learn More</a>
+                <a href="html.php">Learn More</a>
             </div>
             <div class="course-card">
                 <h2>CSS Fundamentals</h2>
@@ -56,5 +69,8 @@
     <footer>
         <p>&copy; 2024 Eduquest. All rights reserved.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

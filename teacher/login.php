@@ -26,7 +26,7 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
   // User exists and password is correct
   $_SESSION["username"] = $username; // Store username in session
-  header("Location: http://localhost/wt/teachers/dashboardTeacher.php");
+  header("Location: http://localhost/wt/teacher/dashboardTeacher.php");
   exit();
 } else {
   // User doesn't exist or password is incorrect

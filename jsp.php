@@ -15,8 +15,7 @@
             
                 <li><a href="courses.php">Courses</a></li>
                 <li><a href="profile.php">Profile</a></li>
-            
-                <li><a href="settings.html">Settings</a></li>
+            <li><a href="home.php" id="zoomLink">Zoom In </a></li>
                 <li><a href="index.html">Logout</a></li>
             </ul>
         </nav>

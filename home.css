@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .logo {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #00ffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background-color: #005f5f;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, 
+nav ul li a:focus {
+    background-color: #004d4d;
+}
+
+/* Main Content Styles */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.welcome {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.welcome h1 {
+    color: #005f5f;
+    font-size: 1.5rem; /* Adjusted font-size */
+}
+
+.welcome p {
+    color: #333;
+}
+
+.overview {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    flex: 1 1 30%;
+    text-align: center;
+}
+
+.card h3 {
+    color: #005f5f;
+}
+
+.card p {
+    color: #333;
+}
+
+.courses {
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.course-card {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 1rem;
+    max-width: 300px;
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.course-card h3 {
+    color: #005f5f;
+}
+
+.course-card p {
+    color: #333;
+}
+
+.course-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background-color: #007b7b;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.course-card a:hover, 
+.course-card a:focus {
+    background-color: #005f5f;
+}
+
+
+.tasks {
+    background-color: #fff; /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+.tasks h2 {
+    color: #005f5f; /* Dark aqua color for heading */
+    font-size: 1.5rem; /* Larger font size for heading */
+    margin-bottom: 20px; /* Add space below heading */
+}
+
+#task-form {
+    margin-bottom: 20px; /* Add space below form */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Add space between form groups */
+}
+
+label {
+    display: block; /* Ensure labels are on their own line */
+    margin-bottom: 5px; /* Add space below labels */
+}
+
+input[type="text"],
+input[type="date"],
+button[type="submit"],
+button#delete-tasks {
+    padding: 10px; /* Increase padding for inputs and buttons */
+    border: 1px solid #bdc3c7; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    width: 100%; /* Full width */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+button[type="submit"]:focus,
+button#delete-tasks:focus {
+    border-color: #17707d; /* Change border color on focus */
+    outline: none; /* Remove default focus outline */
+}
+
+button[type="submit"],
+button#delete-tasks {
+    padding: 0.5rem 1rem; /* Adjust as needed */
+    font-size: 0.9rem; /* Adjust as needed */
+    color: #fff;
+    background-color: #007b7b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 500px;
+}
+
+button[type="submit"]:hover,
+button#delete-tasks:hover {
+    background-color: #333739; /* Darker aqua color on hover */
+}
+
+ul#task-list {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default list padding */
+}
+
+#delete-tasks {
+
+    background-color: #e74c3c; /* Red color for delete button */
+    color: #fff; /* White text color */
+    border: none; /* Remove button border */
+    cursor: pointer; /* Show pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+#delete-tasks:hover {
+    background-color: #c0392b; /* Darker red color on hover */
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}

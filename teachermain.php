@@ -9,9 +9,9 @@
 <body>
 <nav class="navbar">
         <div class="container">
-            <a class="logo" href="#">Eduquest</a>
+            <a class="logo" href="http://localhost/wt">Eduquest</a>
             <div class="navbar-right">
-                <a href="http://localhost/wt/teachers/login.html">Login</a>
+                <a href="http://localhost/wt/teacher/login.html">Login</a>
                
             </div>
         </div>

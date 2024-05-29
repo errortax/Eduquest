@@ -50,13 +50,11 @@ $conn->close();
         <nav>
             <div class="logo">Eduquest</div>
             <ul>
-                <li><a href="home.php">Dashboard</a></li>
-
+            <li><a href="home.php">Dashboard</a></li>
                 <li><a href="courses.php">Courses</a></li>
                 <li><a href="profile.php">Profile</a></li>
-
-                <li><a href="settings.html">Settings</a></li>
-                <li><a href="index.html">Logout</a></li>
+                <li><a id="zoomLink">Zoom In </a></li>
+                <li><a href="logout.php" id="logout-btn">Logout</a></li>
             </ul>
         </nav>
     </header>
@@ -100,36 +98,13 @@ $conn->close();
             </form>
         </section>
 
-        <section class="profile-courses">
-            <h2>Enrolled Courses</h2>
-            <div class="course-list">
-                <div class="course-card">
-                    <h3>HTML Basics</h3>
-                    <p>Progress: 80%</p>
-                    <a href="html.html">Continue Learning</a>
-                </div>
-                <div class="course-card">
-                    <h3>CSS Fundamentals</h3>
-                    <p>Progress: 60%</p>
-                    <a href="css.html">Continue Learning</a>
-                </div>
-                <div class="course-card">
-                    <h3>JavaScript Essentials</h3>
-                    <p>Progress: 50%</p>
-                    <a href="javascript.html">Continue Learning</a>
-                </div>
-                <div class="course-card">
-                    <h3>Bootstrap Mastery</h3>
-                    <p>Progress: 40%</p>
-                    <a href="bootstrap.html">Continue Learning</a>
-                </div>
-            </div>
-        </section>
+      
     </main>
    
     <footer>
         <p>&copy; 2024 Eduquest. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
