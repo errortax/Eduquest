@@ -1,21 +1,25 @@
 <?php
-include 'db.php';
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "teacher_dashboard";
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $sender_id = $_POST['sender_id'];
-    $receiver_id = $_POST['receiver_id'];
-    $message = $_POST['message'];
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    $stmt = $conn->prepare("INSERT INTO messages (sender_id, receiver_id, message) VALUES (?, ?, ?)");
-    $stmt->bind_param("iis", $sender_id, $receiver_id, $message);
-
-    if ($stmt->execute()) {
-        echo "Message sent successfully.";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+$sender_id = $_POST['sender_username'];
+$receiver_id = $_POST['receiver_username'];
+$message = $_POST['message'];
+
+$sql = "INSERT INTO messages (sender_username, receiver_username, message) VALUES ('$sender_id', '$receiver_id', '$message')";
+if ($conn->query($sql) === TRUE) {
+    echo "Message sent";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
 ?>

@@ -112,3 +112,19 @@ form button {
 form button:hover {
     background-color: #2980b9;
 }
+
+ a:visited{
+    color: white;
+}
+
+    #id:link{
+        color: white;
+    }
+    
+    #id:hover{
+        color: white;
+    }
+    
+    #id:active{
+        color: white;
+    }

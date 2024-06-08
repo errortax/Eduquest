@@ -31,7 +31,7 @@ if (isset($_POST['next'])) {
     if ($_SESSION['row_num'] < $total_rows - 1) {
         $_SESSION['row_num']++;
     }
-}
+} 
 
 // Check if there are any rows in the courses table
 if ($total_rows === 0) {
@@ -61,14 +61,24 @@ if ($total_rows === 0) {
 ?>
 
 
-<!-- The rest of your HTML code -->
 
-<form form action="newhtml.php" method="post">
+<form form action="newhtml.php" method="post" id="navigationForm">
     <input type="submit" name="prev" value="Previous">
     <input type="submit" name="next" value="Next">
 </form>
+<script>
+document.getElementById('navigationForm').addEventListener('submit', function(e) {
+    var rowNumber = <?php echo $_SESSION['row_num']; ?>;
+    var totalRows = <?php echo $total_rows; ?>;
+    if (rowNumber >= totalRows - 1) {
+        e.preventDefault(); // Stop the form from submitting
+        alert('You have reached the end of the courses. Starting from the beginning.');
+        location.reload(); // Refresh the page
+    }
+});
+</script>
 
-<!-- The rest of your HTML code -->
+
 
 
 

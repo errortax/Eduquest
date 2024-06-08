@@ -33,7 +33,7 @@ $stmt->close();
 $conn->close();
 ?>
 
-<!-- The rest of your profile.php code goes here -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +50,7 @@ $conn->close();
         <nav>
             <div class="logo">Eduquest</div>
             <ul>
-            <li><a href="home.php">Dashboard</a></li>
+                <li><a href="home.php">Dashboard</a></li>
                 <li><a href="courses.php">Courses</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a id="zoomLink">Zoom In </a></li>
@@ -71,19 +71,17 @@ $conn->close();
                 <div class="form-group">
                     <label for="first-name">Username:</label>
                     <p class="profile-details">Username: <span class="profile_span" id="username">
-                            <?php
-                            echo $username;
-                            ?>
+                            <?php echo htmlspecialchars($username); ?>
                         </span></p>
                 </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
                     <p class="profile-details">Password: <span class="profile_span" id="password">
-                            <?php echo $password; ?>
+                            <?php echo htmlspecialchars($password); ?>
                         </span></p>
                 </div>
-           
-            
+
+                <!--             
             <div id="edit-options">
                 <form id="edit-form" action="update_profile.php" method="post">
                     <label for="username">Username:</label>
@@ -92,15 +90,18 @@ $conn->close();
                     <input type="password" id="password" name="password" value="<?php echo $password; ?>">
                     <input type="submit" value="Update Profile" id="update-btn">
                 </form>
-            </div>
-            
-          
+            </div> -->
+                <form action="update_profile.php" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="password" name="new_password" placeholder="New Password" required>
+                    <input type="submit" value="Update Profile" id="update-btn">
+                </form>
             </form>
         </section>
 
-      
+
     </main>
-   
+
     <footer>
         <p>&copy; 2024 Eduquest. All rights reserved.</p>
     </footer>

@@ -1,41 +1,48 @@
 <?php
-session_start();
+// File path: update_password.php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
+// Database connection parameters
+$host = 'localhost';
+$dbname = 'users';
+$user = 'root';
+$pass = '';
 
-    // Database connection
-    $servername = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "users";
+try {
+    // Create a new PDO instance
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    // Set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Create connection
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+    // Check if form data is submitted
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        // Get the form data
+        $username = $_POST['username'];
+        $new_password = $_POST['new_password'];
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        // Basic validation
+        if (!empty($username) && !empty($new_password)) {
+            // Hash the new password for security
+            $hashed_password = password_hash($new_password, PASSWORD_BCRYPT);
+
+            // Prepare the SQL update statement
+            $sql = "UPDATE login SET password = :password WHERE username = :username";
+            $stmt = $pdo->prepare($sql);
+
+            // Bind parameters
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':password', $hashed_password);
+
+            // Execute the statement
+            if ($stmt->execute()) {
+                echo "Password updated successfully.";
+            } else {
+                echo "Error updating password.";
+            }
+        } else {
+            echo "Please fill in both fields.";
+        }
     }
-
-    // Prepare and bind
-    $stmt = $conn->prepare("UPDATE login SET username = ?, password = ? WHERE username = ?");
-    $stmt->bind_param("sss", $username, $password, $_SESSION["username"]);
-
-    // Execute the statement
-    $stmt->execute();
-
-    // Update the session variables
-    $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
-
-    // Close the statement and the connection
-    $stmt->close();
-    $conn->close();
-
-    // Redirect back to the profile page
-    header("Location: profile.php");
-    exit();
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>

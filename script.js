@@ -125,3 +125,46 @@ if (zoomLink) {
         }
     });
 }
+
+document.getElementById('sendMessageForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const sender_id = document.getElementById('sender_id').value;
+    const receiver_id = document.getElementById('receiver_id').value;
+    const message = document.getElementById('message').value;
+    
+    fetch('send_message.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: `sender_id=${sender_id}&receiver_id=${receiver_id}&message=${message}`
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === 'Message sent') {
+            loadMessages();
+        } else {
+            alert('Failed to send message');
+        }
+    });
+});
+
+function loadMessages() {
+    const sender_id = document.getElementById('sender_username').value;
+    const receiver_id = document.getElementById('receiver_username').value;
+    
+    fetch(`/teacher/getmsg.php?sender_id=${sender_username}&receiver_id=${receiver_username}`)
+    .then(response => response.json())
+    .then(data => {
+        const messagesContainer = document.getElementById('messages');
+        messagesContainer.innerHTML = '';
+        data.forEach(message => {
+            const messageElement = document.createElement('div');
+            messageElement.textContent = message.message;
+            messagesContainer.appendChild(messageElement);
+        });
+    });
+}
+
+setInterval(loadMessages, 1000);
